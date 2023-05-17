@@ -1,0 +1,23 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven {
+            url 'http://dl.bintray.com/amulyakhare/maven'
+            allowInsecureProtocol = true
+        }
+    }
+}
+
+rootProject.name = "DotBuV1.0"
+include ':app'
