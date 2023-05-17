@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.smu.dotbuv10">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DotBuV10"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".ModifSender"
+            android:exported="false" />
+        <activity
+            android:name=".ModifReceptor"
+            android:exported="false" />
+        <activity
+            android:name=".ListarBluethoot"
+            android:exported="false" />
+        <activity
+            android:name=".Cita.Controller.AddCita"
+            android:exported="false" />
+        <activity
+            android:name=".Cita.Model.LIstCitas"
+            android:exported="false" />
+        <activity
+            android:name=".Medicamentos.Controler.BotonesMeds"
+            android:exported="false" />
+        <!--
+             TODO: Before you run your application, you need a Google Maps API key.
+
+             To get one, follow the directions here:
+
+                https://developers.google.com/maps/documentation/android-sdk/get-api-key
+
+             Once you have your API key (it starts with "AIza"), define a new property in your
+             project's local.properties file (e.g. MAPS_API_KEY=Aiza...), and replace the
+             "YOUR_API_KEY" string in this file with "${MAPS_API_KEY}".
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+
+        <activity
+            android:name=".Geofence.Activity.AddGeoFence"
+            android:exported="false"
+            android:label="@string/title_activity_add_geo_fence" />
+        <activity
+            android:name=".Geofence.Activity.Geofence"
+            android:exported="false"
+            android:label="@string/title_activity_geofence" />
+        <activity
+            android:name=".Location.Activity.MapsActivityPacient"
+            android:exported="false"
+            android:label="@string/title_activity_maps_pacient" />
+        <activity
+            android:name=".Location.Controller.LocationPaciente"
+            android:exported="false" />
+        <activity
+            android:name=".Location.Controller.BotonesMapas2"
+            android:exported="false" />
+        <activity
+            android:name=".Medicamentos.Controler.AddMed"
+            android:exported="false" />
+        <activity
+            android:name=".Medicamentos.Controler.Medicamentos"
+            android:exported="false" />
+        <activity
+            android:name=".Medicamentos.AniadirRecord"
+            android:exported="false" />
+        <activity
+            android:name=".User.Controller.usuariosA"
+            android:exported="false" />
+        <activity
+            android:name=".User.Controller.usuariosD"
+            android:exported="false" />
+        <activity
+            android:name=".servicioPaciente.Controler.Crear"
+            android:exported="false" />
+        <activity
+            android:name=".servicioPaciente.Controler.Pacientes"
+            android:exported="false" />
+        <activity
+            android:name=".servicioPaciente.Controler.Botones"
+            android:exported="false" />
+        <activity
+            android:name=".servicioPaciente.Controler.EditarP"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".MainActivityBefore"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".Medicamentos.recordatorio.ServicioA"
+            android:exported="false" />
+        <provider
+            android:name=".Medicamentos.data.ProveedorA"
+            android:authorities="com.smu.dotbuv10"
+            android:exported="false" />
+    </application>
+
+</manifest>
