@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".servicioPaciente.Controler.EditarP"
+    android:background="@drawable/botonmaps2">
+
+    <EditText
+        android:id="@+id/editPersonName"
+        android:layout_width="266dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rounded_edittext"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="@string/namePaciente"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#9A999A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editImage"
+        android:layout_width="289dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded2"
+        android:text="@string/addiconPaciente"
+        android:textColor="@color/white"
+        android:textSize="17.5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editFecha"
+/>
+
+    <ProgressBar
+        android:id="@+id/upload_progress_bar"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="8dp"
+        android:visibility="gone"
+        android:foregroundGravity="center"
+        android:indeterminate="true"
+        app:layout_constraintBottom_toBottomOf="@+id/editimageView5"
+        app:layout_constraintEnd_toEndOf="@+id/editImage"
+        app:layout_constraintHorizontal_bias="0.982"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editImage"
+        app:layout_constraintVertical_bias="0.307"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editbutton3"
+        android:layout_width="266dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/rounded2"
+        android:text="Editar Paciente"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editimageView5"
+        android:textSize="18dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/editFecha"
+        style="?android:spinnerStyle"
+        android:layout_width="266dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="12dp"
+        android:text="Enero 30 2001"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:gravity="center"
+        android:background="@drawable/rounded_edittext"/>
+
+    <ImageView
+        android:id="@+id/editimageView5"
+        android:layout_width="134dp"
+        android:layout_height="127dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editImage"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Seleccionar Cumpleaños"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editPersonName" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/añadirUsers"
+        android:layout_width="266dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/rounded2"
+        android:text="Añadir Cuidador"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editbutton3" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/eliminarUsers"
+        android:layout_width="266dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="36dp"
+        android:text="Eliminar Cuidador"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/añadirUsers"
+        app:layout_constraintVertical_bias="0.0"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:background="@drawable/rounded2"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
